@@ -1,0 +1,9 @@
+{
+  "sharegpt4v_instruct_gpt4-vision_cap100k": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data",
+    "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain/operation_85093.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 85093
+  }
+}
