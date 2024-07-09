@@ -1,4 +1,5 @@
 # using 8 GPUs with slurm system, fine-tune the full LLM
+export PER_DEVICE_BATCH_SIZE=2
 PARTITION='pat_taurus' GPUS=32 sh shell/internlm2_20b_dynamic/agent_pretrain_v1.sh
 
 # using 2 GPUs, fine-tune the LoRA
