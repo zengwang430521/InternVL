@@ -8,17 +8,17 @@
   },
   "agent_ocr_sample": {
     "root": "/mnt/cachenew2/share_data/mayunhe/agent_data",
-    "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain/ocr_sample10_179944.jsonl",
+    "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain/ocr_sample20_89972.jsonl",
     "data_augment": false,
     "repeat_time": 1,
-    "length": 179944
+    "length": 89972
   },
   "agent_grounding_sample": {
     "root": "/mnt/cachenew2/share_data/mayunhe/agent_data",
-    "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain/grounding_sample10_179944.jsonl",
+    "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain/grounding_sample20_89972.jsonl",
     "data_augment": false,
     "repeat_time": 1,
-    "length": 179944
+    "length": 89972
   },
   "screen_ai_complex_qa": {
     "root": "/mnt/lustrenew/zengwang/data/screen_ai/rico_dataset/combined",
