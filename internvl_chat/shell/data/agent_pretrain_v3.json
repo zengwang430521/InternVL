@@ -1,0 +1,23 @@
+{
+  "agent_op": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data",
+    "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain/operation_85092.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 85092
+  },
+  "agent_grounding_sample": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data",
+    "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain/grounding_sample20_89972.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 89972
+  },
+  "screen_ai_grounding_test": {
+    "root": "/mnt/lustrenew/zengwang/data/screen_ai/rico_dataset/combined",
+    "annotation": "/mnt/lustrenew/zengwang/data/screen_ai/screen_ai_processed/annotation_test_grounding_77932.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 77932
+  }
+}
