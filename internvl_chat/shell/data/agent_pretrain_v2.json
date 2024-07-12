@@ -1,0 +1,51 @@
+{
+  "agent_op": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data",
+    "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain/operation_85092.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 85092
+  },
+  "agent_grounding_sample": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data",
+    "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain/grounding_sample20_89972.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 89972
+  },
+  "screen_ai_complex_qa": {
+    "root": "/mnt/lustrenew/zengwang/data/screen_ai/rico_dataset/combined",
+    "annotation": "/mnt/lustrenew/zengwang/data/screen_ai/screen_ai_processed/complex_qa_data_11781.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 11781
+  },
+  "screen_ai_short_train": {
+    "root": "/mnt/lustrenew/zengwang/data/screen_ai/rico_dataset/combined",
+    "annotation": "/mnt/lustrenew/zengwang/data/screen_ai/screen_ai_processed/short_answers_train_68980.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 68980
+  },
+  "screen_ai_short_test": {
+    "root": "/mnt/lustrenew/zengwang/data/screen_ai/rico_dataset/combined",
+    "annotation": "/mnt/lustrenew/zengwang/data/screen_ai/screen_ai_processed/short_answers_test_8427.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 8427
+  },
+  "screen_ai_short_valid": {
+    "root": "/mnt/lustrenew/zengwang/data/screen_ai/rico_dataset/combined",
+    "annotation": "/mnt/lustrenew/zengwang/data/screen_ai/screen_ai_processed/short_answers_validation_8618.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 8618
+  },
+  "screen_ai_grounding_test": {
+    "root": "/mnt/lustrenew/zengwang/data/screen_ai/rico_dataset/combined",
+    "annotation": "/mnt/lustrenew/zengwang/data/screen_ai/screen_ai_processed/annotation_test_grounding_77932.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 77932
+  }
+}
