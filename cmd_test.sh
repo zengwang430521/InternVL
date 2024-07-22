@@ -1,18 +1,14 @@
-srun -p pat_taurus -w SH-IDC1-10-142-5-138  --job-name=internvl  --ntasks=1 --gres=gpu:1 --ntasks-per-node=1 \
+srun -p pat_taurus  --job-name=internvl  --ntasks=1 --gres=gpu:8 --ntasks-per-node=1 \
 /mnt/lustre/zengwang/anaconda3/envs/internvl/bin/lmdeploy  serve api_server \
-/mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2-26B/InternVL-Chat-V1-5 --model-name InternVL-Chat-V1-5
-
-/mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL-Chat-V1-5 --model-name InternVL-Chat-V1-5
-
-/mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2_26B --model-name InternVL2_26B
-
-
-/mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2_40B --model-name InternVL2_40B
+/mnt/lustrenew/share_data/zengwang/gui-mobile/models/models--OpenGVLab--InternVL-Chat-V1-5 --model-name InternVL-Chat-V1-5 \
+--tp 8
 
 /mnt/cache/zengwang/codes/llm/internvl/internvl_chat/work_dirs/agent_pretrain_v1/models--OpenGVLab--InternVL-Chat-V1-5
-
-
-
+/mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2-26B/InternVL-Chat-V1-5 --model-name InternVL-Chat-V1-5
+/mnt/cache/zengwang/codes/llm/internvl/internvl_chat/work_dirs/agent_pretrain_v3/models--OpenGVLab--InternVL-Chat-V1-5
+/mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL-Chat-V1-5 --model-name InternVL-Chat-V1-5
+/mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2_26B --model-name InternVL2_26B
+/mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2_40B --model-name InternVL2_40B
  /mnt/cachenew2/share_data/mayunhe/huggingface/hub/models--OpenGVLab--InternVL-Chat-V1-5/snapshots/c1987c574e0010d8104c545131f97beeffb96a73 \
  --tp 8 --session-len 16384
 
@@ -41,7 +37,10 @@ srun -p pat_taurus -w SH-IDC1-10-142-5-155 --job-name=agent --ntasks=1 --gres=gp
 
 
 ssh -N -f -L 2346:10.142.4.32:22 zengwang@jump-vscode.sensetime.com
-ssh -N -f -L 0.0.0.0:2348:10.142.5.138:23333 dev_1424
+ssh -N -f -L 0.0.0.0:2348:10.142.5.124:23333 dev_1424
 lsof -i :2348
 
 10.155.176.70
+
+~/ads-cli cp s3://0B26B91DAD3D4C929A147112E07E2C0A:4F813D6AD3844508A36AF3A3B0B83242@gui-mobile-share.aoss-external.cn-sh-01.sensecoreapi-oss.cn/data
+
