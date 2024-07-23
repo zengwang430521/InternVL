@@ -1,4 +1,4 @@
-srun -p pat_taurus  --job-name=internvl  --ntasks=1 --gres=gpu:8 --ntasks-per-node=1 \
+srun -p pat_taurus  --job-name=internvl  --ntasks=1 --gres=gpu:1 --ntasks-per-node=1 \
 /mnt/lustre/zengwang/anaconda3/envs/internvl/bin/lmdeploy  serve api_server \
 /mnt/lustrenew/share_data/zengwang/gui-mobile/models/models--OpenGVLab--InternVL-Chat-V1-5 --model-name InternVL-Chat-V1-5 \
 --tp 8
