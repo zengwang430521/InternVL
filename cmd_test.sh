@@ -1,14 +1,15 @@
-srun -p pat_taurus  --job-name=internvl  --ntasks=1 --gres=gpu:1 --ntasks-per-node=1 \
+srun -p pat_taurus  --job-name=internvl  --ntasks=1 --gres=gpu:2 --ntasks-per-node=1 \
 /mnt/lustre/zengwang/anaconda3/envs/internvl/bin/lmdeploy  serve api_server \
-/mnt/lustrenew/share_data/zengwang/gui-mobile/models/models--OpenGVLab--InternVL-Chat-V1-5 --model-name InternVL-Chat-V1-5 \
---tp 8
+/mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2-40B --model-name InternVL2-40B \
+--tp 2
 
+/mnt/lustrenew/share_data/zengwang/gui-mobile/models/models--OpenGVLab--InternVL-Chat-V1-5 --model-name InternVL-Chat-V1-5 \
 /mnt/cache/zengwang/codes/llm/internvl/internvl_chat/work_dirs/agent_pretrain_v1/models--OpenGVLab--InternVL-Chat-V1-5
 /mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2-26B/InternVL-Chat-V1-5 --model-name InternVL-Chat-V1-5
 /mnt/cache/zengwang/codes/llm/internvl/internvl_chat/work_dirs/agent_pretrain_v3/models--OpenGVLab--InternVL-Chat-V1-5
 /mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL-Chat-V1-5 --model-name InternVL-Chat-V1-5
 /mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2_26B --model-name InternVL2_26B
-/mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2_40B --model-name InternVL2_40B
+/mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2-40B --model-name InternVL2-40B
  /mnt/cachenew2/share_data/mayunhe/huggingface/hub/models--OpenGVLab--InternVL-Chat-V1-5/snapshots/c1987c574e0010d8104c545131f97beeffb96a73 \
  --tp 8 --session-len 16384
 
@@ -36,9 +37,7 @@ srun -p pat_taurus -w SH-IDC1-10-142-5-155 --job-name=agent --ntasks=1 --gres=gp
  srun -p pat_taurus -N 1 -w SH-IDC1-10-142-5-127 --gres=gpu:1 python demo.py
 
 
-ssh -N -f -L 2346:10.142.4.32:22 zengwang@jump-vscode.sensetime.com
-ssh -N -f -L 0.0.0.0:2348:10.142.5.124:23333 dev_1424
-lsof -i :2348
+
 
 10.155.176.70
 
@@ -54,3 +53,8 @@ llm-ckpt.aoss-internal.cn-sh-01.sensecoreapi-oss.cn/internvl2_2b ./
 
 ~/ads-cli cp /mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot_dataset \
  s3://AB570E1C87C643D2A8E9BDD8EC5F12A7:AC3D7623BF464791B930A1CB83E500B1@llm-ckpt.aoss-external.cn-sh-01.sensecoreapi-oss.cn/screenshot_dataset/screenshot_dataset
+
+
+ssh -N -f -L 2346:10.142.4.32:22 zengwang@jump-vscode.sensetime.com
+ssh -N -f -L 0.0.0.0:2348:10.142.5.142:23333 dev_1424
+lsof -i :2348
