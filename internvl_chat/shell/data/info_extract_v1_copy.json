@@ -1,4 +1,11 @@
 {
+  "screen_understand": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/ui_layout",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/screen_understand/screen_understand_88815.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 88815
+  },
   "xiaomi_multiple": {
     "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/ui_layout",
     "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/screen_understand/xiaomi_3343.jsonl",
