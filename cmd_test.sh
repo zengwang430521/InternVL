@@ -44,3 +44,13 @@ lsof -i :2348
 
 ~/ads-cli cp s3://0B26B91DAD3D4C929A147112E07E2C0A:4F813D6AD3844508A36AF3A3B0B83242@gui-mobile-share.aoss-external.cn-sh-01.sensecoreapi-oss.cn/data
 
+aws s3 ls  s3://llm-sft-data --endpoint-url=http://aoss-internal.cn-sh-01.sensecoreapi-oss.cn
+aws s3 ls  s3://llm-ckpt --endpoint-url=http://aoss-internal.cn-sh-01.sensecoreapi-oss.cn
+
+
+
+/mnt/mobile/zengwang/ads-cli cp s3://AB570E1C87C643D2A8E9BDD8EC5F12A7:AC3D7623BF464791B930A1CB83E500B1@\
+llm-ckpt.aoss-internal.cn-sh-01.sensecoreapi-oss.cn/internvl2_2b ./
+
+~/ads-cli cp /mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot_dataset \
+ s3://AB570E1C87C643D2A8E9BDD8EC5F12A7:AC3D7623BF464791B930A1CB83E500B1@llm-ckpt.aoss-external.cn-sh-01.sensecoreapi-oss.cn/screenshot_dataset/screenshot_dataset
