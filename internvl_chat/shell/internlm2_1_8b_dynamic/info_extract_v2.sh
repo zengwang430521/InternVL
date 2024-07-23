@@ -39,7 +39,7 @@ srun -p ${PARTITION} \
   --model_name_or_path "/mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2-2B" \
   --conv_style "internlm2-chat" \
   --output_dir ${OUTPUT_DIR} \
-  --meta_path "shell/data/info_extract_v1.json" \
+  --meta_path "shell/data/info_extract_v2.json" \
   --overwrite_output_dir True \
   --force_image_size 448 \
   --max_dynamic_patch 12 \

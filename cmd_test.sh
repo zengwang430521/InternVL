@@ -1,7 +1,13 @@
-srun -p pat_taurus  --job-name=internvl  --ntasks=1 --gres=gpu:2 --ntasks-per-node=1 \
+srun -p pat_taurus  --job-name=internvl  --ntasks=1 --gres=gpu:1 --ntasks-per-node=1 \
 /mnt/lustre/zengwang/anaconda3/envs/internvl/bin/lmdeploy  serve api_server \
+/mnt/lustrenew/share_data/zengwang/gui-mobile/models/vit0.3b_internlm7b_stage4_ui_data_all_d240712 --model-name InternVL2-2B
+
+/mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2-2B --model-name InternVL2-2B
+
+/mnt/cache/zengwang/codes/llm/internvl/internvl_chat/work_dirs/info_extract_2b_v2/InternVL2-2B --model-name InternVL2-2B
+
 /mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2-40B --model-name InternVL2-40B \
---tp 2
+--tp 8
 
 /mnt/lustrenew/share_data/zengwang/gui-mobile/models/models--OpenGVLab--InternVL-Chat-V1-5 --model-name InternVL-Chat-V1-5 \
 /mnt/cache/zengwang/codes/llm/internvl/internvl_chat/work_dirs/agent_pretrain_v1/models--OpenGVLab--InternVL-Chat-V1-5
