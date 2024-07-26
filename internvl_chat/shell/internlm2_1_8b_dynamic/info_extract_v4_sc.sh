@@ -83,7 +83,7 @@ export CMD="\
   --ps_version 'v2' \
   --deepspeed \"zero_stage1_config.json\" \
   --report_to \"tensorboard\" \
-  --launcher torch"
+  "
 
 echo $CMD
 
