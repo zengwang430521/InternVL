@@ -41,7 +41,7 @@ export LAUNCHER1="python -u -m torch.distributed.run \
    --max_restarts 0 \
    --tee 3 \
   "
-export LAUNCHER="torch"
+export LAUNCHER="pytorch"
 
 export CMD="\
   internvl/train/internvl_chat_finetune.py \
