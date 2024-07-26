@@ -83,11 +83,10 @@ export CMD="\
   --ps_version 'v2' \
   --deepspeed \"zero_stage1_config.json\" \
   --report_to \"tensorboard\" \
-  --launcher torch \
-  2>&1 | tee -a \"${OUTPUT_DIR}/training_log.txt\" "
+  --launcher torch"
 
 echo $CMD
 
-bash -c "$LAUNCHER $CMD"
+bash -c "$LAUNCHER $CMD" 2>&1 | tee -a ${OUTPUT_DIR}/training_log.txt
 
 echo "END TIME: $(date)"
