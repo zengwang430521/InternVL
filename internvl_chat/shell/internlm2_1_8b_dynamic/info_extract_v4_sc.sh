@@ -33,7 +33,7 @@ echo "MASTER_ADDR = $MASTER_ADDR"
 echo "MASTER_PORT = $MASTER_PORT"
 
 
-export LAUNCHER="python -u -m torch.distributed.run \
+export LAUNCHER1="python -u -m torch.distributed.run \
    --nproc_per_node $GPUS_PER_NODE \
    --nnodes $NNODES \
    --rdzv_endpoint $MASTER_ADDR:$MASTER_PORT \
@@ -41,7 +41,7 @@ export LAUNCHER="python -u -m torch.distributed.run \
    --max_restarts 0 \
    --tee 3 \
   "
-
+export LAUNCHER="torch"
 
 export CMD="\
   internvl/train/internvl_chat_finetune.py \
@@ -87,6 +87,6 @@ export CMD="\
 
 echo $CMD
 
-bash -c "$LAUNCHER $CMD" 2>&1 | tee -a ${OUTPUT_DIR}/training_log.txt
+bash -c "$LAUNCHER1 $CMD" 2>&1 | tee -a ${OUTPUT_DIR}/training_log.txt
 
 echo "END TIME: $(date)"
