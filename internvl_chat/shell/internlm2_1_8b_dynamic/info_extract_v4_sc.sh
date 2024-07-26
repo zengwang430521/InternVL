@@ -11,33 +11,43 @@ BATCH_SIZE=${BATCH_SIZE:-1024}
 PER_DEVICE_BATCH_SIZE=${PER_DEVICE_BATCH_SIZE:-2}
 GRADIENT_ACC=$((BATCH_SIZE / PER_DEVICE_BATCH_SIZE / GPUS))
 
-
 export PYTHONPATH="${PYTHONPATH}:$(pwd)"
 export MASTER_PORT=34229
 export TF_CPP_MIN_LOG_LEVEL=3
 
-OUTPUT_DIR='work_dirs/info_extract_2b_v4'
+OUTPUT_DIR='work_dirs/info_extract_2b_v4_sc'
 
 if [ ! -d "$OUTPUT_DIR" ]; then
   mkdir -p "$OUTPUT_DIR"
 fi
 
-# number of gpus: 32
-# batch size per gpu: 2
-# total batch size: 1024
-# epoch: 1
-srun -p ${PARTITION} \
-  --gres=gpu:${GPUS_PER_NODE} \
-  --nodes=${NODES} \
-  --ntasks=${GPUS} \
-  --ntasks-per-node=${GPUS_PER_NODE} \
-  --cpus-per-task=${CPUS_PER_TASK} \
-  --kill-on-bad-exit=1 \
-  --quotatype=${QUOTA_TYPE} \
-  ${SRUN_ARGS} \
-  python -u internvl/train/internvl_chat_finetune.py \
-  --model_name_or_path "/mnt/share/zengwang/pretrained/InternVL2-2B" \
-  --conv_style "internlm2-chat" \
+#MASTER_ADDR=$(awk '/master-0/{print $1}' /etc/hosts | uniq)
+#MASTER_ADDR=$(scontrol show hostnames $SLURM_JOB_NODELIST | head -n 1)  # for multi node
+#MASTER_ADDR=127.0.0.1
+
+MASTER_PORT=6000
+#MASTER_PORT=6006
+
+echo "MASTER_ADDR = $MASTER_ADDR"
+echo "MASTER_PORT = $MASTER_PORT"
+
+GPUS_PER_NODE=8
+NNODES=$((GPUS / GPUS_PER_NODE))
+
+export LAUNCHER="python -u -m torch.distributed.run \
+   --nproc_per_node $GPUS_PER_NODE \
+   --nnodes $NNODES \
+   --rdzv_endpoint $MASTER_ADDR:$MASTER_PORT \
+   --rdzv_backend c10d \
+   --max_restarts 0 \
+   --tee 3 \
+  "
+
+
+export CMD="\
+  internvl/train/internvl_chat_finetune.py \
+  --model_name_or_path \"/mnt/share/zengwang/pretrained/InternVL2-2B\" \
+  --conv_style \"internlm2-chat\" \
   --output_dir ${OUTPUT_DIR} \
   --meta_path "shell/data/info_extract_v4_sc.json" \
   --overwrite_output_dir True \
@@ -56,14 +66,14 @@ srun -p ${PARTITION} \
   --num_train_epochs 1 \
   --per_device_train_batch_size ${PER_DEVICE_BATCH_SIZE} \
   --gradient_accumulation_steps ${GRADIENT_ACC} \
-  --evaluation_strategy "no" \
-  --save_strategy "steps" \
+  --evaluation_strategy \"no\" \
+  --save_strategy \"steps\" \
   --save_steps 200 \
   --save_total_limit 1 \
   --learning_rate 4e-5 \
   --weight_decay 0.01 \
   --warmup_ratio 0.03 \
-  --lr_scheduler_type "cosine" \
+  --lr_scheduler_type \"cosine\" \
   --logging_steps 1 \
   --max_seq_length 4096 \
   --do_train True \
@@ -72,6 +82,13 @@ srun -p ${PARTITION} \
   --dynamic_image_size True \
   --use_thumbnail True \
   --ps_version 'v2' \
-  --deepspeed "zero_stage1_config.json" \
-  --report_to "tensorboard" \
-  2>&1 | tee -a "${OUTPUT_DIR}/training_log.txt"
+  --deepspeed \"zero_stage1_config.json\" \
+  --report_to \"tensorboard\" \
+  2>&1 | tee -a \"${OUTPUT_DIR}/training_log.txt\"
+  "
+
+echo $CMD
+
+bash -c "$LAUNCHER $CMD"
+
+echo "END TIME: $(date)"
