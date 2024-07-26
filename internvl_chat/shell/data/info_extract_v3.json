@@ -1,0 +1,23 @@
+{
+  "screen_understand": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/screen_understand/screen_understand_88815.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 88815
+  },
+  "xiaomi_multiple": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/v0.2/all/xiaomi_24264.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 24264
+  },
+  "xiaomi_single": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/v0.2/all/xiaomi_single_27521.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 27521
+  }
+}
