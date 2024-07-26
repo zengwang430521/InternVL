@@ -5,6 +5,7 @@ GPUS=${GPUS:-32}
 GPUS_PER_NODE=${GPUS_PER_NODE:-8}
 QUOTA_TYPE=${QUOTA_TYPE:-"reserved"}
 NODES=$((GPUS / GPUS_PER_NODE))
+NNODES=$((GPUS / GPUS_PER_NODE))
 CPUS_PER_TASK=${CPUS_PER_TASK:-10}
 SRUN_ARGS=${SRUN_ARGS:-""}
 BATCH_SIZE=${BATCH_SIZE:-1024}
@@ -31,8 +32,6 @@ MASTER_PORT=6000
 echo "MASTER_ADDR = $MASTER_ADDR"
 echo "MASTER_PORT = $MASTER_PORT"
 
-GPUS_PER_NODE=8
-NNODES=$((GPUS / GPUS_PER_NODE))
 
 export LAUNCHER="python -u -m torch.distributed.run \
    --nproc_per_node $GPUS_PER_NODE \
@@ -84,8 +83,8 @@ export CMD="\
   --ps_version 'v2' \
   --deepspeed \"zero_stage1_config.json\" \
   --report_to \"tensorboard\" \
-  2>&1 | tee -a \"${OUTPUT_DIR}/training_log.txt\"
-  "
+  --launcher torch \
+  2>&1 | tee -a \"${OUTPUT_DIR}/training_log.txt\" "
 
 echo $CMD
 
