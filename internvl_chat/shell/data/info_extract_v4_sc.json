@@ -1,0 +1,23 @@
+{
+  "screen_understand": {
+    "root": "/mnt/share/zengwang/data/screenshot_dataset/screenshot",
+    "annotation": "/mnt/share/zengwang/data/screenshot_dataset/info_extract/screen_understand/screen_understand_88815.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 88815
+  },
+  "xiaomi_multiple": {
+    "root": "/mnt/share/zengwang/data/screenshot_dataset/screenshot",
+    "annotation": "/mnt/share/zengwang/data/screenshot_dataset/info_extract/v0.2/valid/xiaomi_7913.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 7913
+  },
+  "xiaomi_single": {
+    "root": "/mnt/share/zengwang/data/screenshot_dataset/screenshot",
+    "annotation": "/mnt/share/zengwang/data/screenshot_dataset/info_extract/v0.2/valid/xiaomi_single_8634.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 8634
+  }
+}

@@ -66,6 +66,15 @@ llm-ckpt.aoss-internal.cn-sh-01.sensecoreapi-oss.cn/internvl2_2b ./
 ~/ads-cli cp /mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot_dataset \
  s3://AB570E1C87C643D2A8E9BDD8EC5F12A7:AC3D7623BF464791B930A1CB83E500B1@llm-ckpt.aoss-external.cn-sh-01.sensecoreapi-oss.cn/screenshot_dataset/screenshot_dataset
 
+~/ads-cli cp /mnt/lustrenew/share_data/zengwang/info_extract/screen_understand \
+ s3://AB570E1C87C643D2A8E9BDD8EC5F12A7:AC3D7623BF464791B930A1CB83E500B1@llm-ckpt.aoss-external.cn-sh-01.sensecoreapi-oss.cn/screenshot_dataset/info_extract/screen_understand
+
+
+/mnt/mobile/zengwang/ads-cli cp s3://AB570E1C87C643D2A8E9BDD8EC5F12A7:AC3D7623BF464791B930A1CB83E500B1@llm-ckpt.aoss-internal.cn-sh-01.sensecoreapi-oss.cn/screenshot_dataset/screenshot_dataset
+
+/mnt/mobile/zengwang/ads-cli cp s3://AB570E1C87C643D2A8E9BDD8EC5F12A7:AC3D7623BF464791B930A1CB83E500B1@\
+llm-ckpt.aoss-internal.cn-sh-01.sensecoreapi-oss.cn/screenshot_dataset/info_extract ./
+
 
 ssh -N -f -L 2346:10.142.4.32:22 zengwang@jump-vscode.sensetime.com
 ssh -N -f -L 0.0.0.0:2348:10.142.5.142:23333 dev_1424
