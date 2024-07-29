@@ -79,7 +79,7 @@ llm-ckpt.aoss-internal.cn-sh-01.sensecoreapi-oss.cn/screenshot_dataset/info_extr
 
 
 ssh -N -f -L 2346:10.142.4.32:22 zengwang@jump-vscode.sensetime.com
-ssh -N -f -L 0.0.0.0:2348:10.142.5.142:23333 dev_1424
+ssh -N -f -L 0.0.0.0:2348:10.142.5.131:23333 dev_1424
 lsof -i :2348
 
 

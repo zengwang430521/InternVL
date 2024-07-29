@@ -15,7 +15,7 @@
   },
   "xiaomi_single": {
     "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot",
-    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/v0.2/valid/xiaomi_single_25450.jsonl",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/v0.3/valid/xiaomi_single_25450.jsonl",
     "data_augment": false,
     "repeat_time": 1,
     "length": 25450
