@@ -1,7 +1,7 @@
 set -x
 
 PARTITION=${PARTITION:-"pat_taurus"}
-GPUS=${GPUS:-32}
+GPUS=${GPUS:-8}
 GPUS_PER_NODE=${GPUS_PER_NODE:-8}
 QUOTA_TYPE=${QUOTA_TYPE:-"reserved"}
 NODES=$((GPUS / GPUS_PER_NODE))
@@ -16,16 +16,12 @@ export PYTHONPATH="${PYTHONPATH}:$(pwd)"
 export MASTER_PORT=34229
 export TF_CPP_MIN_LOG_LEVEL=3
 
-OUTPUT_DIR='work_dirs/info_extract_2b_v8'
+OUTPUT_DIR='work_dirs/info_extract_26b_v8'
 
 if [ ! -d "$OUTPUT_DIR" ]; then
   mkdir -p "$OUTPUT_DIR"
 fi
 
-# number of gpus: 32
-# batch size per gpu: 2
-# total batch size: 1024
-# epoch: 1
 srun -p ${PARTITION} \
   --gres=gpu:${GPUS_PER_NODE} \
   --nodes=${NODES} \
@@ -36,15 +32,15 @@ srun -p ${PARTITION} \
   --quotatype=${QUOTA_TYPE} \
   ${SRUN_ARGS} \
   python -u internvl/train/internvl_chat_finetune.py \
-  --model_name_or_path "/mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2-2B" \
+  --model_name_or_path "/mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2-26B/InternVL-Chat-V1-5" \
   --conv_style "internlm2-chat" \
   --output_dir ${OUTPUT_DIR} \
-  --meta_path "shell/data/info_extract_v8.json" \
+  --meta_path "shell/data/agent_pretrain_v3.json" \
   --overwrite_output_dir True \
   --force_image_size 448 \
   --max_dynamic_patch 12 \
   --down_sample_ratio 0.5 \
-  --drop_path_rate 0.1 \
+  --drop_path_rate 0.4 \
   --pad2square False \
   --freeze_llm False \
   --freeze_mlp False \
@@ -60,8 +56,8 @@ srun -p ${PARTITION} \
   --save_strategy "steps" \
   --save_steps 1000 \
   --save_total_limit 1 \
-  --learning_rate 4e-5 \
-  --weight_decay 0.01 \
+  --learning_rate 2e-5 \
+  --weight_decay 0.05 \
   --warmup_ratio 0.03 \
   --lr_scheduler_type "cosine" \
   --logging_steps 1 \
@@ -72,6 +68,6 @@ srun -p ${PARTITION} \
   --dynamic_image_size True \
   --use_thumbnail True \
   --ps_version 'v2' \
-  --deepspeed "zero_stage1_config.json" \
+  --deepspeed "zero_stage3_config.json" \
   --report_to "tensorboard" \
   2>&1 | tee -a "${OUTPUT_DIR}/training_log.txt"
