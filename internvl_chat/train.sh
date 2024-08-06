@@ -28,4 +28,3 @@ CUDA_VISIBLE_DEVICES=0,1 sh shell/hermes2_yi34b/internvl_chat_v1_2_hermes2_yi34b
 
 
 
-
