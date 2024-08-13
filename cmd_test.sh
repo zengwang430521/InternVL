@@ -1,5 +1,10 @@
 srun -p pat_taurus  --job-name=internvl  --ntasks=1 --gres=gpu:1 --ntasks-per-node=1 \
 /mnt/lustre/zengwang/anaconda3/envs/internvl/bin/lmdeploy  serve api_server \
+
+--session-len 16384
+
+/mnt/cache/zengwang/codes/llm/internvl/internvl_chat/work_dirs/info_extract_2b_v9/InternVL2-2B --model-name InternVL2-2B
+
 /mnt/cache/zengwang/codes/llm/internvl/internvl_chat/work_dirs/info_extract_2b_v8/InternVL2-2B --model-name InternVL2-2B
 
 /mnt/cache/zengwang/codes/llm/internvl/internvl_chat/work_dirs/info_extract_2b_v1/InternVL2-2B --model-name InternVL2-2B
@@ -79,7 +84,7 @@ llm-ckpt.aoss-internal.cn-sh-01.sensecoreapi-oss.cn/screenshot_dataset/info_extr
 
 
 ssh -N -f -L 2346:10.142.4.32:22 zengwang@jump-vscode.sensetime.com
-ssh -N -f -L 0.0.0.0:2348:10.142.5.150:23333 dev_1424
+ssh -N -f -L 0.0.0.0:2348:10.142.5.109:23333 dev_1424
 lsof -i :2348
 
 
