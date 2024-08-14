@@ -30,13 +30,13 @@
 
 
   "lewei_screen_understand": {
-    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot_lewei_share",
-    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/screen_understand_lewei_share_24746.jsonl",
+    "root": "/mnt/lustrenew/share_data/zengwang/gui-mobile/data",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/screen_understand/screen_understand_lewei_share_24746.jsonl",
     "data_augment": false,
     "repeat_time": 1,
     "length": 24746
   },
-  "leiwei_grounding": {
+  "lewei_grounding": {
     "root": "/mnt/lustrenew/share_data/zengwang/gui-mobile/data",
     "annotation": "/mnt/lustrenew/share_data/zengwang/gui-mobile/data/ui_phone_2403_ground_d240430_v1_processed_24798.jsonl",
     "data_augment": false,
