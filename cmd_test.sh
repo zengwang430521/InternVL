@@ -1,5 +1,7 @@
 srun -p pat_taurus  --job-name=internvl  --ntasks=1 --gres=gpu:1 --ntasks-per-node=1 \
 /mnt/lustre/zengwang/anaconda3/envs/internvl/bin/lmdeploy  serve api_server \
+/mnt/cache/zengwang/codes/llm/internvl/internvl_chat/work_dirs/single_op_v1/InternVL2-2B --model-name InternVL2-2B
+
 /mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2-40B
 
 /mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2-26B/InternVL-Chat-V1-5 --model-name InternVL2-26B

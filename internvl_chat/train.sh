@@ -1,5 +1,9 @@
 # using 8 GPUs with slurm system, fine-tune the full LLM
 cd /mnt/mobile/zengwang/code/agent/InternVL/internvl_chat
+PER_DEVICE_BATCH_SIZE=4 PARTITION='pat_taurus' GPUS=8 sh shell/internlm2_1_8b_dynamic/single_op_v4.sh
+
+PER_DEVICE_BATCH_SIZE=4 PARTITION='pat_taurus' GPUS=8 sh shell/internlm2_1_8b_dynamic/single_op_v3.sh
+
 PER_DEVICE_BATCH_SIZE=4 PARTITION='pat_taurus' GPUS=8 sh shell/internlm2_1_8b_dynamic/single_op_v2.sh
 PER_DEVICE_BATCH_SIZE=4 PARTITION='pat_taurus' GPUS=8 sh shell/internlm2_1_8b_dynamic/single_op_v1.sh
 
