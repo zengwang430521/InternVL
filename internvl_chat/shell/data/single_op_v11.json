@@ -80,7 +80,27 @@
     "repeat_time": 1,
     "length": 12426
   },
-
+  "screen_ai_structure_train": {
+    "root": "/mnt/lustrenew/zengwang/data/screen_ai/rico_dataset/combined",
+    "annotation": "/mnt/lustrenew/zengwang/data/screen_ai/screen_ai_processed_v3/annotation_train_structure_15526.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 15526
+  },
+  "screen_ai_structure_valid": {
+    "root": "/mnt/lustrenew/zengwang/data/screen_ai/rico_dataset/combined",
+    "annotation": "/mnt/lustrenew/zengwang/data/screen_ai/screen_ai_processed_v3/annotation_valid_structure_2308.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 2308
+  },
+  "screen_ai_structure_test": {
+    "root": "/mnt/lustrenew/zengwang/data/screen_ai/rico_dataset/combined",
+    "annotation": "/mnt/lustrenew/zengwang/data/screen_ai/screen_ai_processed_v3/annotation_test_structure_4214.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 4214
+  },
 
 
   "agent_op": {
@@ -90,11 +110,18 @@
     "repeat_time": 1,
     "length": 84856
   },
-  "agent_mix_multiturn": {
+  "agent_ocr_sample": {
     "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset",
-    "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain_v5/mix_multiturn_115488.jsonl",
+    "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain_v5/ocr_sample20_0_89972.jsonl",
     "data_augment": false,
     "repeat_time": 1,
-    "length": 115488
+    "length": 89972
+  },
+  "agent_grounding_sample": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset",
+    "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain_v5/grounding_sample20_10_89972.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 89972
   }
 }

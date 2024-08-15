@@ -75,7 +75,7 @@
   },
   "screen_ai_grounding_train_sample": {
     "root": "/mnt/lustrenew/zengwang/data/screen_ai/rico_dataset/combined",
-    "annotation": "/mnt/lustrenew/zengwang/data/screen_ai/screen_ai_processed_v2/annotation_train_grounding__sample20_12426.jsonl",
+    "annotation": "/mnt/lustrenew/zengwang/data/screen_ai/screen_ai_processed_v2/annotation_train_grounding_sample20_10_12426.jsonl",
     "data_augment": false,
     "repeat_time": 1,
     "length": 12426
