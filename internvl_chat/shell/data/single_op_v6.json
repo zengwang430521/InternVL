@@ -1,0 +1,9 @@
+{
+  "agent_op": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset",
+    "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain_v4/operation_85053.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 85053
+  }
+}
