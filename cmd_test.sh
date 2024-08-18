@@ -70,7 +70,12 @@ srun -p pat_taurus -w SH-IDC1-10-142-5-155 --job-name=agent --ntasks=1 --gres=gp
 aws s3 ls  s3://llm-sft-data --endpoint-url=http://aoss-internal.cn-sh-01.sensecoreapi-oss.cn
 aws s3 ls  s3://llm-ckpt --endpoint-url=http://aoss-internal.cn-sh-01.sensecoreapi-oss.cn
 
+~/ads-cli cp /mnt/lustrenew/share_data/zengwang/pretrained_model/internlm2_5-1_8b-chat \
+ s3://AB570E1C87C643D2A8E9BDD8EC5F12A7:AC3D7623BF464791B930A1CB83E500B1@llm-ckpt.aoss-external.cn-sh-01.sensecoreapi-oss.cn/internlm2_5-1_8b-chat
 
+/mnt/mobile/zengwang/ads-cli cp s3://AB570E1C87C643D2A8E9BDD8EC5F12A7:AC3D7623BF464791B930A1CB83E500B1@\
+llm-ckpt.aoss-internal.cn-sh-01.sensecoreapi-oss.cn/internlm2_5-1_8b-chat \
+/mnt/share/zengwang/pretrained/internlm2_5-1_8b-chat
 
 /mnt/mobile/zengwang/ads-cli cp s3://AB570E1C87C643D2A8E9BDD8EC5F12A7:AC3D7623BF464791B930A1CB83E500B1@\
 llm-ckpt.aoss-internal.cn-sh-01.sensecoreapi-oss.cn/internvl2_2b ./
