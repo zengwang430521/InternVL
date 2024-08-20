@@ -1,0 +1,62 @@
+{
+  "screen_understand": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/screen_understand/screen_understand_88815.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 88815
+  },
+  "xiaomi_multiple": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/v0.3/valid/xiaomi_22838.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 22838
+  },
+  "xiaomi_single": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/v0.3/valid/xiaomi_single_25450.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 25450
+  },
+  "general_single": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/general_info_extract/general_info_extract_conf90_70586.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 70586
+  },
+
+
+  "leiwei_grounding": {
+    "root": "/mnt/lustrenew/share_data/zengwang/gui-mobile/data",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/gui-mobile/data/ui_phone_2403_ground_d240430_v1_processed_24798.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 24798
+  },
+
+
+  "agent_op": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset",
+    "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain_v5/operation_84856.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 84856
+  },
+  "agent_ocr_sample": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset",
+    "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain_v5/ocr_sample20_0_89972.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 89972
+  },
+  "agent_grounding_sample": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset",
+    "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain_v5/grounding_sample20_10_89972.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 89972
+  }
+}
