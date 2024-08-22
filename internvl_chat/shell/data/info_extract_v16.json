@@ -48,8 +48,5 @@
     "data_augment": false,
     "repeat_time": 1,
     "length": 17482
-  },
-
-
-
+  }
 }

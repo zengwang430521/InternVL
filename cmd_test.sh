@@ -1,7 +1,7 @@
 srun -p pat_taurus  --job-name=internvl  --ntasks=1 --gres=gpu:8 --ntasks-per-node=1 \
 /mnt/lustre/zengwang/anaconda3/envs/internvl/bin/lmdeploy  serve api_server \
 /mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2-40B --tp 8 --session-len 16384
-/mnt/lustrenew/share_data/zengwang/gui-mobile/models/models--OpenGVLab--InternVL-Chat-V1-5  --tp 8 --session-len 16384
+/mnt/lustrenew/share_data/zengwang/gui-mobile/models/models--OpenGVLab--InternVL-Chat-V1-5  --tp 8 bbox_xcycwh
 
 srun -p pat_taurus  -x SH-IDC1-10-142-5-121 --job-name=internvl  --ntasks=1 --gres=gpu:1 --ntasks-per-node=1 \
 /mnt/lustre/zengwang/anaconda3/envs/internvl/bin/lmdeploy  serve api_server \

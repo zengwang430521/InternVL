@@ -30,14 +30,14 @@
     "length": 12426
   },
 
-
   "agent_ocr_sample": {
     "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset",
-    "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain_v2/ocr__sample20_89972.jsonl",
+    "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain_v5/ocr_sample20_0_89972.jsonl",
     "data_augment": false,
     "repeat_time": 1,
     "length": 89972
   },
+
 
   "fake_multiple1": {
     "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/fake_wechat_dialog/batch1",
