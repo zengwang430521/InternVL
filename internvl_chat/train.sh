@@ -8,6 +8,8 @@ PER_DEVICE_BATCH_SIZE=4 PARTITION='pat_taurus' GPUS=8 sh shell/internlm2_1_8b_dy
 
 PER_DEVICE_BATCH_SIZE=4 PARTITION='pat_taurus' GPUS=8 sh shell/internlm2_1_8b_dynamic/info_extract_v11.sh
 
+QUOTA_TYPE=auto PER_DEVICE_BATCH_SIZE=4 PARTITION='pat_taurus' GPUS=8 sh shell/internlm2_1_8b_dynamic/single_op_v18.sh
+
 QUOTA_TYPE=auto PER_DEVICE_BATCH_SIZE=4 PARTITION='pat_taurus' GPUS=8 sh shell/internlm2_1_8b_dynamic/single_op_v11.sh
 
 PER_DEVICE_BATCH_SIZE=4 PARTITION='pat_taurus' GPUS=8 sh shell/internlm2_1_8b_dynamic/single_op_v4.sh
