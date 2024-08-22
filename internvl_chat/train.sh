@@ -4,7 +4,7 @@ SRUN_ARGS='-x SH-IDC1-10-142-5-121'   QUOTA_TYPE=auto PER_DEVICE_BATCH_SIZE=4 PA
 
 SRUN_ARGS='-x SH-IDC1-10-142-5-121'   QUOTA_TYPE=auto PER_DEVICE_BATCH_SIZE=4 PARTITION='pat_taurus' GPUS=8 sh shell/internlm2_1_8b_dynamic/info_extract_v15.sh
 
-PER_DEVICE_BATCH_SIZE=4 PARTITION='pat_taurus' GPUS=8 sh shell/internlm2_1_8b_dynamic/info_extract_v16.sh
+PER_DEVICE_BATCH_SIZE=4 PARTITION='pat_taurus' GPUS=8 sh shell/internlm2_1_8b_dynamic/info_extract_v17.sh
 
 PER_DEVICE_BATCH_SIZE=4 PARTITION='pat_taurus' GPUS=8 sh shell/internlm2_1_8b_dynamic/info_extract_v11.sh
 
