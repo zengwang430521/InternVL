@@ -16,7 +16,7 @@ export PYTHONPATH="${PYTHONPATH}:$(pwd)"
 export MASTER_PORT=34229
 export TF_CPP_MIN_LOG_LEVEL=3
 
-OUTPUT_DIR='work_dirs/info_extract_2b_v16'
+OUTPUT_DIR='work_dirs/info_extract_2b_v17'
 
 if [ ! -d "$OUTPUT_DIR" ]; then
   mkdir -p "$OUTPUT_DIR"
@@ -39,7 +39,7 @@ srun -p ${PARTITION} \
   --model_name_or_path "/mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2-2B" \
   --conv_style "internlm2-chat" \
   --output_dir ${OUTPUT_DIR} \
-  --meta_path "shell/data/info_extract_v16.json" \
+  --meta_path "shell/data/info_extract_v17.json" \
   --overwrite_output_dir True \
   --force_image_size 448 \
   --max_dynamic_patch 12 \
