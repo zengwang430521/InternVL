@@ -52,7 +52,7 @@
   },
   "fake_single2": {
     "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/fake_wechat_dialog/batch2",
-    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/fake_wechat_xiaomi/set2/v4/single_19285.jsonl",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/fake_wechat_xiaomi/set2/v4/single_20310.jsonl",
     "data_augment": false,
     "repeat_time": 1,
     "length": 20310
