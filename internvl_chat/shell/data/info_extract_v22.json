@@ -1,0 +1,75 @@
+{
+  "screen_understand": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/screen_understand/screen_understand_88815.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 88815
+  },
+
+  "xiaomi_multiple": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/v0.5/valid/xiaomi_22064.jsonl",
+    "data_augment": false,
+    "repeat_time": 2,
+    "length": 22064
+  },
+  "xiaomi_single": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/v0.5/valid/xiaomi_single_24251.jsonl",
+    "data_augment": false,
+    "repeat_time": 2,
+    "length": 24251
+  },
+  "general_single": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/general_info_extract/general_info_extract_conf90_70586.jsonl",
+    "data_augment": false,
+    "repeat_time": 2,
+    "length": 70586
+  },
+
+  "fake_multiple1": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/fake_wechat_dialog/batch1",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/fake_wechat_xiaomi/set1/v3/multiple_1221.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 1221
+  },
+  "fake_single1": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/fake_wechat_dialog/batch1",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/fake_wechat_xiaomi/set1/v3/single_1221.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 1221
+  },
+  "fake_multiple2": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/fake_wechat_dialog/batch2",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/fake_wechat_xiaomi/set2/v4/multiple_19285.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 19285
+  },
+  "fake_single2": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/fake_wechat_dialog/batch2",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/fake_wechat_xiaomi/set2/v4/single_20310.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 20310
+  },
+
+  "lewei_multiple": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot_lewei_share",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/lewei_info/v1/xiaomi_lewei_gui_7434.jsonl",
+    "data_augment": false,
+    "repeat_time": 2,
+    "length": 7434
+  },
+  "lewei_single": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot_lewei_share",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/lewei_info/v1/xiaomi_single_lewei_gui_8308.jsonl",
+    "data_augment": false,
+    "repeat_time": 2,
+    "length": 8308
+  }
+}
