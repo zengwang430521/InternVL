@@ -29,6 +29,23 @@
     "length": 70586
   },
 
+
+  "lewei_multiple": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot_lewei_share",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/lewei_info/v1/xiaomi_lewei_gui_7434.jsonl",
+    "data_augment": false,
+    "repeat_time": 2,
+    "length": 7434
+  },
+  "lewei_single": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot_lewei_share",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/lewei_info/v1/xiaomi_single_lewei_gui_8308.jsonl",
+    "data_augment": false,
+    "repeat_time": 2,
+    "length": 8308
+  },
+
+
   "fake_multiple1": {
     "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/fake_wechat_dialog/batch1",
     "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/fake_wechat_xiaomi/set1/v3/multiple_1221.jsonl",
@@ -56,20 +73,6 @@
     "data_augment": false,
     "repeat_time": 1,
     "length": 20310
-  },
-
-  "lewei_multiple": {
-    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot_lewei_share",
-    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/lewei_info/v1/xiaomi_lewei_gui_7434.jsonl",
-    "data_augment": false,
-    "repeat_time": 2,
-    "length": 7434
-  },
-  "lewei_single": {
-    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/screenshot_dataset/screenshot_lewei_share",
-    "annotation": "/mnt/lustrenew/share_data/zengwang/info_extract/lewei_info/v1/xiaomi_single_lewei_gui_8308.jsonl",
-    "data_augment": false,
-    "repeat_time": 2,
-    "length": 8308
   }
+
 }
