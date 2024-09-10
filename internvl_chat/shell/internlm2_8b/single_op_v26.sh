@@ -36,7 +36,7 @@ srun -p ${PARTITION} \
   --quotatype=${QUOTA_TYPE} \
   ${SRUN_ARGS} \
   python -u internvl/train/internvl_chat_finetune.py \
-  --model_name_or_path "/mnt/lustrenew/share_data/zengwang/gui-mobile/models/vit0.3b_internlm7b_stage4_ui_data_all_d240712" \
+  --model_name_or_path "/mnt/lustrenew/share_data/zengwang/gui-mobile/models/vit0_3b_internlm7b_stage4_ui_data_all_d240712" \
   --conv_style "internlm2-chat" \
   --output_dir ${OUTPUT_DIR} \
   --meta_path "shell/data/single_op_v26.json" \

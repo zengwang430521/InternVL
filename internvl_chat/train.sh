@@ -1,6 +1,8 @@
 # using 8 GPUs with slurm system, fine-tune the full LLM
 cd /mnt/mobile/zengwang/code/agent/InternVL/internvl_chat
-SRUN_ARGS='-x SH-IDC1-10-142-5-121'   QUOTA_TYPE=auto PER_DEVICE_BATCH_SIZE=1 PARTITION='pat_taurus' GPUS=32 sh shell/internlm2_20b_dynamic/single_op_v7.sh
+SRUN_ARGS='-x SH-IDC1-10-142-5-121'   QUOTA_TYPE=auto PER_DEVICE_BATCH_SIZE=1 PARTITION='pat_taurus' GPUS=32 sh shell/internlm2_20b_dynamic/single_op_v26.sh
+
+SRUN_ARGS='-x SH-IDC1-10-142-5-121'   QUOTA_TYPE=auto PER_DEVICE_BATCH_SIZE=2 PARTITION='pat_taurus' GPUS=8 sh shell/internlm2_8b/single_op_v26.sh
 
 SRUN_ARGS='-x SH-IDC1-10-142-5-121'   QUOTA_TYPE=auto PER_DEVICE_BATCH_SIZE=4 PARTITION='pat_taurus' GPUS=16 sh shell/internlm2_1_8b_dynamic/single_op_v30.sh
 
