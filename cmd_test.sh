@@ -1,11 +1,13 @@
 srun -p pat_taurus  --job-name=internvl  --ntasks=1 --gres=gpu:4 --ntasks-per-node=1 \
 /mnt/lustre/zengwang/anaconda3/envs/internvl/bin/lmdeploy  serve api_server \
+/mnt/cache/zengwang/codes/llm/internvl/internvl_chat/work_dirs/single_op_v7_26b/InternVL2-26B  --tp 4
+
 /mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2-40B --tp 4 --session-len 32768
 /mnt/lustrenew/share_data/zengwang/gui-mobile/models/models--OpenGVLab--InternVL-Chat-V1-5  --tp 4
 
 srun -p pat_taurus  -w SH-IDC1-10-142-5-89 --job-name=internvl  --ntasks=1 --gres=gpu:1 --ntasks-per-node=1 \
 /mnt/lustre/zengwang/anaconda3/envs/internvl/bin/lmdeploy  serve api_server \
-/mnt/cache/zengwang/codes/llm/internvl/internvl_chat/work_dirs/single_op_v27/InternVL2-2B --model-name InternVL2-2B --port 24444
+/mnt/cache/zengwang/codes/llm/internvl/internvl_chat/work_dirs/single_op_v26/InternVL2-2B --model-name InternVL2-2B
 
 /mnt/cache/zengwang/codes/llm/internvl/internvl_chat/work_dirs/info_extract_2b_v22/InternVL2-2B --model-name InternVL2-2B
 
@@ -159,9 +161,19 @@ s3://4CBCB7F4FF274CBD9E14ACEFC51FFF89:632F6C6C8F3F46FB90C5B265F75E10F7@llm-resul
 /mnt/mobile/zengwang/ads-cli cp s3://AB570E1C87C643D2A8E9BDD8EC5F12A7:AC3D7623BF464791B930A1CB83E500B1@\
 llm-ckpt.aoss-internal.cn-sh-01.sensecoreapi-oss.cn/results ./
 
-
+aws s3 ls  s3://foundation-share --endpoint-url=http://aoss.cn-sh-01.sensecoreapi-oss.cn
 aws s3 ls  s3://foundation-share --endpoint-url=http://aoss-internal.cn-sh-01.sensecoreapi-oss.cn
 aws s3 ls  s3://llm-ckpt --endpoint-url=http://aoss-internal.cn-sh-01.sensecoreapi-oss.cn
+
+
+[zw]
+aws_access_key_id = AB570E1C87C643D2A8E9BDD8EC5F12A7
+aws_secret_access_key = AC3D7623BF464791B930A1CB83E500B1
+
+
+[audio_share]
+aws_access_key_id = CE4B872D623E4F45B6F7E439B2710959
+aws_secret_access_key = 9433144DEFFD434198393FB186296070
 
 
 
