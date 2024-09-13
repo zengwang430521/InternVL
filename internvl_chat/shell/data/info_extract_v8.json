@@ -84,21 +84,21 @@
 
 
   "agent_op": {
-    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset",
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset/v1",
     "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain_v2/operation_85092.jsonl",
     "data_augment": false,
     "repeat_time": 1,
     "length": 85092
   },
   "agent_ocr_sample": {
-    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset",
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset/v1",
     "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain_v2/ocr__sample20_89972.jsonl",
     "data_augment": false,
     "repeat_time": 1,
     "length": 89972
   },
   "agent_grounding_sample": {
-    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset",
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset/v1",
     "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain_v2/grounding__sample20_89972.jsonl",
     "data_augment": false,
     "repeat_time": 1,

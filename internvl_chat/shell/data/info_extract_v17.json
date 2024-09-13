@@ -31,7 +31,7 @@
   },
 
   "agent_ocr_sample": {
-    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset",
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset/v1",
     "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain_v5/ocr_sample20_0_89972.jsonl",
     "data_augment": false,
     "repeat_time": 1,
