@@ -93,10 +93,10 @@
 
   "agent_op_multistep_rawloc_new": {
     "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset/v1",
-    "annotation": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset/v3/multistep.jsonl",
+    "annotation": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset/v3/multi_step.jsonl",
     "data_augment": false,
     "repeat_time": 1,
-    "length": 112384
+    "length": 112350
   },
 
 

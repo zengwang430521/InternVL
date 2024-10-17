@@ -83,6 +83,14 @@
 
 
 
+  "agent_op_rawloc_v4": {
+    "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset/v1",
+    "annotation": "/mnt/lustrenew/zengwang/data/agent_data/pretrain_rawloc_v4/operation_85085.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 85085
+  },
+
   "agent_op_single_new": {
     "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset/v1",
     "annotation": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset/v3/single_step.jsonl",
