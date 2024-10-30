@@ -85,18 +85,18 @@
 
   "agent_op_new": {
     "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset/v1",
-    "annotation": "/mnt/lustrenew/share_data/zengwang/agent_data/new_summary_thought/single_step.jsonl",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/agent_data/new_summary_thought/single_step_88622.jsonl",
     "data_augment": false,
     "repeat_time": 1,
-    "length": 85085
+    "length": 88622
   },
 
   "agent_op_multistep_new": {
     "root": "/mnt/cachenew2/share_data/mayunhe/agent_data/task_dataset/v1",
-    "annotation": "/mnt/lustrenew/share_data/zengwang/agent_data/new_summary_thought/multi_step.jsonl",
+    "annotation": "/mnt/lustrenew/share_data/zengwang/agent_data/new_summary_thought/multi_step_120132.jsonl",
     "data_augment": false,
     "repeat_time": 1,
-    "length": 96932
+    "length": 120132
   },
 
 
