@@ -1,5 +1,7 @@
 srun -p pat_taurus --job-name=internvl --ntasks=1 --gres=gpu:8 --ntasks-per-node=1 \
 /mnt/lustre/zengwang/anaconda3/envs/internvl/bin/lmdeploy  serve api_server \
+/mnt/cache/zengwang/codes/llm/internvl/internvl_chat/work_dirs/single_op_v40_26b/InternVL2-26B
+
 /mnt/lustrenew/share_data/zengwang/pretrained_model/InternVL2-40B --tp 8 --session-len 32768
 
 
@@ -18,9 +20,9 @@ srun -p pat_taurus --job-name=internvl  --ntasks=1 --gres=gpu:1 --ntasks-per-nod
 /mnt/lustrenew/share_data/zengwang/gui-mobile/models/models--OpenGVLab--InternVL-Chat-V1-5  --tp 4
 
 
-srun -p pat_taurus  -w SH-IDC1-10-142-5-89 --job-name=internvl  --ntasks=1 --gres=gpu:1 --ntasks-per-node=1 \
+srun -p pat_taurus   --job-name=internvl  --ntasks=1 --gres=gpu:1 --ntasks-per-node=1 \
 /mnt/lustre/zengwang/anaconda3/envs/internvl/bin/lmdeploy  serve api_server \
-/mnt/cache/zengwang/codes/llm/internvl/internvl_chat/work_dirs/single_op_v37/InternVL2-2B --model-name InternVL2-2B --session-len 8192
+/mnt/cache/zengwang/codes/llm/internvl/internvl_chat/work_dirs/single_op_v40/InternVL2-2B --model-name InternVL2-2B --session-len 8192
 
 
 /mnt/cache/zengwang/codes/llm/internvl/internvl_chat/work_dirs/single_op_v35/InternVL2-2B --model-name InternVL2-2B
