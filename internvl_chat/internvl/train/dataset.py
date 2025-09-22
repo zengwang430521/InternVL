@@ -247,13 +247,13 @@ class TCSLoader(object):
 def load_video(fn, image_type='image', max_num_frames=-1, min_num_frames=8, sample='rand', clip=None):
     if fn.endswith('/'):
         frames = read_frames_folder(fn, num_frames=max_num_frames, min_num_frames=min_num_frames,
-                                    client=self.client, sample=sample)
+                                    client=None, sample=sample)
     elif fn.endswith('.gif'):
         frames = read_frames_gif(fn, num_frames=max_num_frames, min_num_frames=min_num_frames,
-                                 client=self.client, sample=sample)
+                                 client=None, sample=sample)
     else:
         frames = read_frames_decord(fn, num_frames=max_num_frames, min_num_frames=min_num_frames,
-                                    client=self.client, sample=sample, clip=clip)
+                                    client=None, sample=sample, clip=clip)
     return frames
 
 
