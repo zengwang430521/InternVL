@@ -34,7 +34,7 @@ torchrun \
   --use_fast_tokenizer False \
   --output_dir ${OUTPUT_DIR} \
   --meta_path "./shell/data/internvl_1_2_finetune_custom.json" \
- --overwrite_output_dir True \
+  --overwrite_output_dir True \
   --force_image_size 448 \
   --max_dynamic_patch 1 \
   --down_sample_ratio 0.5 \
@@ -58,7 +58,7 @@ torchrun \
   --lr_scheduler_type "cosine" \
   --logging_steps 1 \
   --max_seq_length 16384 \
-  --max_num_frames 32 \
+  --max_num_frame 32 \
   --min_num_frame 4 \
   --do_train True \
   --grad_checkpoint True \
