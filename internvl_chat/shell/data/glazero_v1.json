@@ -1,7 +1,7 @@
 {
   "llava_video_0_30_s_academic_mc_v0_1_qa": {
     "root": "/afs/zengwang/data/video_data/LLaVA-Video-178K/0_30_s_academic_v0_1",
-    "annotation": "/afs/zengwang/projects/glazero/data/train/processed/llava_video/0_30_s_academic_mc_v0_1__processed.jsonl",
+    "annotation": "/afs/zengwang/projects/glazero/data/train/processed/llava_video/0_30_s_academic_mc_v0_1_processed.jsonl",
     "data_augment": false,
     "max_dynamic_patch": 1,
     "repeat_time": 1,
