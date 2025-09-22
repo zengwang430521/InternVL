@@ -1,0 +1,35 @@
+{
+  "llava_video_0_30_s_academic_mc_v0_1_qa": {
+    "root": "/afs/zengwang/data/video_data/LLaVA-Video-178K/0_30_s_academic_v0_1",
+    "annotation": "/afs/zengwang/projects/glazero/data/train/processed/llava_video/0_30_s_academic_mc_v0_1__processed.json",
+    "data_augment": false,
+    "max_dynamic_patch": 1,
+    "repeat_time": 1,
+    "length": 5753
+  },
+  "llava_video_0_30_s_academic_oe_v0_1_qa": {
+    "root": "/afs/zengwang/data/video_data/LLaVA-Video-178K/0_30_s_academic_v0_1",
+    "annotation": "/afs/zengwang/projects/glazero/data/train/processed/0_30_s_academic_oe_v0_1_qa_processed.json",
+    "data_augment": false,
+    "max_dynamic_patch": 1,
+    "repeat_time": 0.1,
+    "length": 48468
+  },
+  "llava_video_0_30_s_academic_mc_v0_1_cap": {
+    "root": "/afs/zengwang/data/video_data/LLaVA-Video-178K/0_30_s_academic_v0_1",
+    "annotation": "/afs/zengwang/projects/glazero/data/train/processed/llava_video/0_30_s_academic_v0_1_cap_processed.json",
+    "data_augment": false,
+    "max_dynamic_patch": 1,
+    "repeat_time": 0.5,
+    "length": 11985
+  },
+
+  "UCA": {
+    "root": "/afs/zengwang/projects/glazero/data/train/UCF_Crime/videos",
+    "annotation": "/afs/zengwang/projects/glazero/data/train/processed/UCA_train_val_test.jsonl",
+    "data_augment": false,
+    "max_dynamic_patch": 1,
+    "repeat_time": 1,
+    "length": 4123
+  }
+}
