@@ -50,7 +50,8 @@ from internvl.train.dataset import (ConcatDataset, TCSLoader,
                                     dynamic_preprocess, preprocess,
                                     preprocess_internlm,
                                     preprocess_internvl2_5, preprocess_mpt,
-                                    preprocess_phi3)
+                                    preprocess_phi3,
+                                    load_video)
 from internvl.train.dataset_packed import PackedDataset, packed_collate_fn
 from PIL import Image, ImageFile, PngImagePlugin, UnidentifiedImageError
 from torch.utils.data import Dataset
@@ -536,13 +537,22 @@ class LazySupervisedDataset(Dataset):
 
         # Load the video frames using tcs_loader
         # TODO: Load videos without using tcsloader.
-        image_list = self.tcs_loader(
-            video_path,
-            image_type='video',
-            max_num_frames=self.max_num_frame,
-            min_num_frames=self.min_num_frame,
-            sample=self.sampling_method,
-            clip=data_item.get('clip', None))
+        if self.tcs_loader is not None:
+            image_list = self.tcs_loader(
+                video_path,
+                image_type='video',
+                max_num_frames=self.max_num_frame,
+                min_num_frames=self.min_num_frame,
+                sample=self.sampling_method,
+                clip=data_item.get('clip', None))
+        else:
+            image_list = load_video(
+                video_path,
+                image_type='video',
+                max_num_frames=self.max_num_frame,
+                min_num_frames=self.min_num_frame,
+                sample=self.sampling_method,
+                clip=data_item.get('clip', None))
 
         # Generate special tokens for each video frame
         special_tokens = '\n'.join(['Frame-{}: <image>'.format(i + 1) for i in range(len(image_list))])

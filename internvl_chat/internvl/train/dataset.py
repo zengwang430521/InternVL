@@ -244,6 +244,19 @@ class TCSLoader(object):
             return frames
 
 
+def load_video(fn, image_type='image', max_num_frames=-1, min_num_frames=8, sample='rand', clip=None):
+    if fn.endswith('/'):
+        frames = read_frames_folder(fn, num_frames=max_num_frames, min_num_frames=min_num_frames,
+                                    client=self.client, sample=sample)
+    elif fn.endswith('.gif'):
+        frames = read_frames_gif(fn, num_frames=max_num_frames, min_num_frames=min_num_frames,
+                                 client=self.client, sample=sample)
+    else:
+        frames = read_frames_decord(fn, num_frames=max_num_frames, min_num_frames=min_num_frames,
+                                    client=self.client, sample=sample, clip=clip)
+    return frames
+
+
 def expand2square(pil_img, background_color):
     width, height = pil_img.size
     if width == height:
